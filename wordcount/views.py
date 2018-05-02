@@ -10,7 +10,6 @@ def base_view(request):
 #Implements the logic to handle the incoming request content and return the word count as the output
 def get_count(request):
 	context = {} #envelope dictionary to return results/errors to the page
-
 	wordcount_form = WordCount(request.POST) #instantiate form with request data/parameters
 	
 	#if data is blank throw error
@@ -20,8 +19,17 @@ def get_count(request):
 
 	#process data if valid content is input by the user
 	content = wordcount_form.cleaned_data['data']
+	splitOperateWords = content.strip().split()
+	
+	count = 0
+	for word in splitOperateWords:
+		if re.findall(r'\w+',word.strip()):
+			count = count + 1
+
+	'''Test Code
 	splitWords = content.split() #split on spaces to count number of words
 	#validWords = re.findall(r'\w+',content)
-	numOfWords = len(splitWords)
-	context['numOfWords'] = numOfWords
+	#numOfWords = len(splitWords)
+	'''
+	context['numOfWords'] = str(count)#numOfWords
 	return render(request, 'wordcount/input_view.html', context)
