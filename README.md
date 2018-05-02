@@ -40,3 +40,8 @@ Open the browser and visit: http://localhost:8000 (as per your default port conf
 2. Use the text box to enter the text-content
 3. Click on count button to count the number of words in the entered text-content
 
+### Assumpotions
+1. All strings (including single characters) have been considered as words
+2. Thus, the number of words have been calculated based on splitting the sentence on the spaces
+3. Test Regex patterns as well. Eventually followed the MS word count style which takes on ly spaces in account
+4. For custom counts, consideration such as only considering strings with alphanumeric characters as words can be made

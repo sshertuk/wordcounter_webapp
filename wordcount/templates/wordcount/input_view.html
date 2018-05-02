@@ -6,8 +6,8 @@
     <h4 style="color: #ffffff">Please input the content:</h4><br>
 	<form class="form-group-lg text-left" action="{% url 'get_count' %}" method="POST">
 		{% if error %}
-			<div class="alert alert-danger col-7" role="alert" style="background-color: transparent; color: #ffffff; border-color: #ffffff">
-			   {{error}}
+			<div class="alert alert-danger col-7" role="alert" style="background-color: white; color: black; border-color: #ffffff">
+			   <i class="fas fa-exclamation-circle"></i>&nbsp{{error}}
 			</div>
 		{% endif %}
 		<div class="form-row">
