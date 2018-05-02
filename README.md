@@ -4,7 +4,7 @@ Demo application to count the number of word entered in a form textbox.
 
 ## Getting Started
 
-The web application (hosted on AWS EC2 Ubuntu dev server) can be accessed at: 
+The web application (hosted on AWS EC2 Ubuntu dev server) can be accessed at: http://18.217.110.13:8000/
 
 Addtionally, following instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
@@ -29,6 +29,10 @@ python manage.py migrate
 3. Run application on localhost
 ```
 python manage.py runserver
+```
+4.
+```
+Open the browser and visit: http://localhost:8000 (as per your default port config)
 ```
 
 ### Directions to Use
