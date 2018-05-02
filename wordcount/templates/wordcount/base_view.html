@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load staticfiles %}
+	<meta charset="utf-8">
+	<meta name="social" content="width-device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+	<!--<link rel="stylesheet" href="/static/fileclassifier/css/style.css">
+	<link rel="stylesheet" href="/static/fileclassifier/css/signin.css">-->
+</head>
+<body id="backgroundimg" style="background-image: url('{% static "wordcount/Img/learning.png" %}')";>
+		<header>
+			<div>
+				<nav class="navbar fixed-top flex-wrap">
+				<div class="form-row col-12">
+					<a class="navbar-brand col-3" href="/">
+						<img src="{% static "wordcount/Img/logo.png" %}" alt="logo" height="42" width="180">
+					</a> 
+					<a class="nav-item nav-link dropdown-toggle col-2" href="#" style="color: #ffffff"><strong>SOLUTIONS</strong></a>
+					<a class="nav-item nav-link  dropdown-toggle col-2" href="#" style="color: #ffffff"><strong>FEATURES</strong></a>
+					<a class="nav-item nav-link  dropdown-toggle col-2" href="#" style="color: #ffffff"><strong>COURSES</strong></a>
+					<a class="nav-item nav-link dropdown-toggle col-2" href="#" style="color: #ffffff"><strong>RESOURCES</strong></a>
+				</div>
+				</nav>
+			</div>
+		</header>
+		<div style="padding-top: 85px">
+			<div class="jumbotron jumbotron-fluid text-left" id="jumbo" style="background-color: rgba(5,4,2,0.2);padding-top: 90px">
+			  <div class="container text-left justify-content-start" style="color: #ffffff">
+			    <h1 class="display-5" style="font-size: 50px; align-content: left"><i class="fab fa-accusoft" style="color: #6acbe2;"></i></i>&nbsp Changing the way the world learns <i>ENGLISH</i>.</h1>
+			    <p class="lead">This is a demo application to count the number of words entered by the user in the text box</p>
+			  </div>
+			</div>
+		<!--<div class="jumbotron jumbotron-fluid jum jumbotron-hr text-left">
+		  <div class="container text-left justify-content-start">
+		    <h1 class="display-5"><i class="fas fa-cogs"></i></i>&nbsp Training AIVA.</h1>
+		    <p class="lead">This is a demo application to depict how we can help AIVA classify files.</p>
+		  </div>
+		</div>-->
+	</div>
+		<div class="container-fluid" style="padding-top: 10px">
+			{% block ip_content %}
+		    {% endblock %}
+		</div>
+	<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="/static/wordcount/js/wordcounter.js"></script>
+</body>
+</html>

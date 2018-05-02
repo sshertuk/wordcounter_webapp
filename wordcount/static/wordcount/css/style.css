@@ -1,0 +1,26 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.backgroundimg{
+	    background-repeat: no-repeat;
+	    background-position: top;
+	    background-attachment: fixed;
+	    background-repeat: no-repeat;
+}
+
+.navbar {
+	opacity: 0.2;
+	filter: alpha(opacity=20); 
+}
+
+#jumbo {
+    /* IE8 and below */
+    background: rgb(200, 54, 54);
+    background: rgba(200, 54, 54, 0.5);
+    margin-bottom: 0px;
+    opacity: 0.2;
+    color: #fff;
+    background: #000 
+}

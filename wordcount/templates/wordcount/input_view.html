@@ -1,0 +1,45 @@
+{% extends "wordcount/base_view.html" %}
+
+{% block ip_content %}
+
+<div class="text-left container">
+    <h4 style="color: #ffffff">Please input the content:</h4><br>
+	<form class="form-group-lg text-left" action="{% url 'get_count' %}" method="POST">
+		{% if error %}
+			<div class="alert alert-danger col-7" role="alert" style="background-color: transparent; color: #ffffff; border-color: #ffffff">
+			   {{error}}
+			</div>
+		{% endif %}
+		<div class="form-row">
+			<div class="form-group  col-md-7">
+				<textarea id="content" class="form-control w-150 h-200" type="text" class="form-control" name="data" style="background-color: transparent;color: #ffffff; height: 200px; font-size: 18px;" oninput="wordCounter(document.getElementById('content').value);"></textarea>
+			</div>
+			<div class="form-group col-1"></div>
+			<div class="form-group col-4 card" style="border-color: #ffffff; background-color: transparent; color: #ffffff">
+			  <div class="card-header" style="border-color: #ffffff">
+			    Count Statistics
+			  </div>
+			  <div class="card-body form-group">
+			  	{% if not numOfWords %}
+				    <h5 class="card-title">No. of Charaters Entered: </h5>
+				    <div id="charcount">
+				    	<h1 class="card-text">0</h1>
+					</div>
+				{% else %}
+					<h5 class="card-title">No. of Words Entered: </h5>
+				    <div id="wordcount">
+				    	<h1 class="card-text">{{numOfWords}}</h1>
+					</div>
+				{% endif %}
+			  </div>
+			</div>
+		</div><br>
+		<div class="text-left">
+			<button class="btn btn-md mb-2" type="submit" style="background-color: #6acbe2;"><i class="fas fa-forward"></i>&nbsp<b>Count</b></button>&nbsp
+			<a class="btn btn-md mb-2" role="button" href="/" style="background-color: transparent; border-color: #ffffff; font-color: white; color: #ffffff"><i class="fas fa-redo-alt"></i>&nbsp <b>Reset</b></a>
+		</div>
+		{% csrf_token %}
+	</form>
+</div>
+
+{% endblock %}
