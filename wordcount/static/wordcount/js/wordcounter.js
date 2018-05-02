@@ -1,7 +1,6 @@
 //word counting on onchange
 
 function wordCounter(content){
-	//alert(content);
     var input = content.match(/\S+/g);
     var numOfWords = input ? input.length : 0
     var numOfCharacters = content.length;
