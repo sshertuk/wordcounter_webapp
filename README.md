@@ -41,7 +41,7 @@ Open the browser and visit: http://localhost:8000 (as per your default port conf
 3. Click on count button to count the number of words in the entered text-content
 
 ### Assumpotions
-1. All strings (including single characters) have been considered as words
-2. Thus, the number of words have been calculated based on splitting the sentence on the spaces
-3. Test Regex patterns as well. Eventually followed the MS word count style which takes on ly spaces in account
-4. For custom counts, consideration such as only considering strings with alphanumeric characters as words can be made
+1. Strings which contain atleast one valid (alphanumeric) character is considered a word
+2. Thus, the number of words have been calculated based on characters comprising each word
+3. Regex patterns used
+4. Major Trade-off : Used regex for custom consideration to choose accuracy over performance as regex are expensive
